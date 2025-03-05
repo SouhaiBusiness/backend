@@ -15,7 +15,6 @@
     "backend": "file:",
     "chart.js": "^4.4.2",
     "mongodb": "^6.0.0",
-    "mongodb-adapter": "^0.0.4",
     "mongoose": "^8.10.0",
     "next": "15.1.6",
     "next-auth": "^4.24.11",
