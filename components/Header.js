@@ -36,9 +36,7 @@ export default function Header() {
           <div onClick={toggleFullScreen}>
             { isFullScreen ? <GoScreenFull /> : <MdCloseFullscreen /> }
           </div>
-          {/*<div className='notification'>
-            <img src='/img/notification.png' alt='notification' />
-          </div>*/}
+          
           <div className='profilenav'>
             {session ? <img src={session.user.image} alt='user' /> : <img src='/img/user.png' alt='user' />}
             
