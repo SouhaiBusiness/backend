@@ -8,7 +8,7 @@ import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
  
 
-export default function Aside() {
+export default function Aside({ isOpen }) {
 
     const router = useRouter();
     const {clicked, setClicked} = useState(false);
@@ -30,7 +30,7 @@ export default function Aside() {
 
   return (
     <>
-      <aside className='asideleft'>
+      <aside className={`asideleft ${isOpen ? "show-menu" : "hide-menu"}`}>
         <ul>
           <Link href='/'>
             <li className={activeLink === '/' ? 'navactive' : ''} onClick={() => handleLinkClick('/')}>

@@ -12,6 +12,13 @@ export default function App({
 }) {
   const [loading, setLoading] = useState(false);
 
+  const [sidebarOpen, setSidebarOpen] = useState(true)
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen)
+  }
+
+
   return (
     <>
       <SessionProvider session={session}>
@@ -22,8 +29,8 @@ export default function App({
           </div>
         ) : (
           <>
-            <Header />
-            <Aside />
+            <Header toggleSidebar={toggleSidebar} />
+            <Aside isOpen={sidebarOpen} />
             <main>
               <Aos>
                 <Component {...pageProps} />

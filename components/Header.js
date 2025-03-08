@@ -4,7 +4,7 @@ import { MdCloseFullscreen } from 'react-icons/md';
 import { useState } from 'react';
 import { useSession } from 'next-auth/react';
 
-export default function Header() {
+export default function Header({ toggleSidebar }) {
 
   const { data: session } = useSession();
   
@@ -28,7 +28,7 @@ export default function Header() {
       <header className='header flex flex-sb'>
         <div className='logo flex gap-2'>
           <h1>Admin</h1>
-          <div className='headerham flex justify-center'>
+          <div className='headerham flex justify-center' onClick={toggleSidebar}>
             <FaBarsStaggered />
           </div>
         </div>
