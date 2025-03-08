@@ -1347,3 +1347,13 @@ body:has(.asideleft.hide-menu) .dashboard {
     height: 40px;
   }
 }
+
+/**************************   media query   ****************************************/
+@media screen and (max-width: 768px) {
+  .leftyearoverview{
+     width: 100%;
+  }
+.right_salescont{
+  width: 100%;
+}
+}
