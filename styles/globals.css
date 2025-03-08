@@ -485,6 +485,7 @@ body:has(.asideleft.hide-menu) .dashboard {
 
 /* year overview */
 .year_overview {
+  display: flex;
   width: 100%;
 }
 
@@ -1349,7 +1350,11 @@ body:has(.asideleft.hide-menu) .dashboard {
 }
 
 /**************************   media query   ****************************************/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
+  .year_overview{
+    flex-direction: column;
+    gap: 1.5rem;
+  }
   .leftyearoverview{
      width: 100%;
   }
